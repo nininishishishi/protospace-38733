@@ -9,7 +9,7 @@ class PrototypesController < ApplicationController
 
   def new
     unless user_signed_in?
-      redirect_to action: :index
+      redirect_to  user_session_path
     end
     @prototype = Prototype.new
   end
@@ -58,7 +58,7 @@ class PrototypesController < ApplicationController
 
   def move_to_index
     unless user_signed_in? && current_user.id == @prototype.user_id
-      redirect_to action: :index
+      redirect_to  user_session_path
     end
   end
 

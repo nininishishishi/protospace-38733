@@ -19,7 +19,7 @@
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
            <% if user_signed_in? %>
-           <span><%= current_user.name %>
+           <span><%#<%= current_user.name %>
              <div class="nav__right"> 
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
                <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
